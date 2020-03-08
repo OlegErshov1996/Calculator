@@ -2,6 +2,18 @@ function insert(number) {
     document.form.textview.value = document.form.textview.value + number;
 }
 
-function equal() {
-    
+function equally() {
+    let exp = document.form.textview.value;
+    if(exp) {
+        document.form.textview.value = eval(exp);
+    }
+}
+
+function clean() {
+    document.form.textview.value = '';
+}
+
+function back() {
+    let exp = document.form.textview.value;
+    document.form.textview.value = exp.substring(0, exp.length-1);
 }
